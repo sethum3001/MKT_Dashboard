@@ -1,7 +1,7 @@
 streamlit
-pandas
 gspread
+pandas
+matplotlib
 google-auth
 google-auth-oauthlib
 google-auth-httplib2
-google-auth-python-oauthlib
