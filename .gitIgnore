@@ -1,0 +1,34 @@
+# Ignore Google credentials file (Highly Sensitive)
+mkt-dashboard-450501-39522c4d0871.json
+
+# Ignore Python virtual environments
+venv/
+.env
+
+# Ignore compiled Python files
+*.pyc
+*.pyo
+__pycache__/
+
+# Ignore system files (Mac/Linux/Windows)
+.DS_Store
+Thumbs.db
+
+# Ignore Streamlit cache (optional)
+.streamlit/
+
+# Ignore logs and temporary files
+logs/
+*.log
+
+# Ignore Jupyter Notebook checkpoints (if used)
+.ipynb_checkpoints/
+
+# Ignore VS Code settings (if using VS Code)
+.vscode/
+
+# Ignore dependency files (only needed for local use)
+Pipfile
+Pipfile.lock
+
+# Ignore node_modules (if any frontend int
