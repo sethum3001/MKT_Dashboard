@@ -6,7 +6,9 @@ from google.oauth2.service_account import Credentials
 
 # Load Google Sheets Data
 def get_google_sheet(sheet_url, sheet_name):
-    creds = Credentials.from_service_account_file("mkt-dashboard-450501-39522c4d0871.json", scopes=["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"])
+    # Use Streamlit Secrets to load the service account credentials
+    creds_dict = st.secrets["gcp_service_account"]
+    creds = Credentials.from_service_account_info(creds_dict, scopes=["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"])
     client = gspread.authorize(creds)
     sheet = client.open_by_url(sheet_url).worksheet(sheet_name)
     
